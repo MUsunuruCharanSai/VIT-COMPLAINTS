@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+      <link rel='stylesheet' type='text/css' href='/styles.css' />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    </head>
+
+    <body>
+      <nav>
+        <p>VIT COMPLAINTS</p>
+        <ul>
+          <li><a href='/'>Home</a></li>
+          <li class='nav-button'><a href='/complaints'>Submit a Complaint</a></li>
+        </ul>
+      </nav>
+      <div class='form-container'>
+        
+        <h3> Submit a complaint </h3>
+        <form method='post' action='/complaints' class='complaintform'>
+
+          <label for='name'>Name:</label>
+          <input type='text' name='name'> </input>
+          <label for='regno'>Register No:</label>
+          <input type='text' name='rno'></input>
+          <label for='type'>Complaint Type:</label>
+          <input type='text' name='type' required></input>
+          <label for = 'dept'> Department: </label>
+          <select name='dept'>
+            <option value='cse'>CSE</option>
+            <option value='it'>IT</option>
+            <option value='aids'>AIDS</option>
+            <option value='aiml'>AIML</option>
+            <option value='csbs'>CSBS</option>
+          </select>
+          <label>Complaint:</label>
+          <textarea rows='12' cols='6' class='ta' name='complaint' required></textarea>
+
+          <button type='submit' > Submit </input>
+
+
+        </form>
+        
+      </div>
+        
+    </body>
+
+</html>

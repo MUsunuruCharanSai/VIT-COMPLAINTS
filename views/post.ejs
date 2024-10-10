@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='stylesheet' type='text/css' href='/styles.css' />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Home</title>
+</head>
+<body>
+  <nav>
+    <p>VIT COMPLAINTS</p>
+    <ul>
+      <li><a href='/'>Home</a></li>
+      <li class='nav-button'><a href='/complaints'>Submit a Complaint</a></li>
+    </ul>
+  </nav>
+
+  
+  
+  <div class='post-container'>
+    <div class='post'>
+      <h3>Name: <%= data.name %></h3>
+      <p>Roll Number: <%= data.rno %></p>
+      <p>Type: <%= data.type %></p>
+      <p>Department: <%= data.dept %></p>
+      <p>Complaint: <%= data.complaint %></p>
+      <span class='post-counter'><%= data.likes %></span>
+    <a class='submit-button' href='/'> Back to Home </a>
+    </div>
+   
+             <div class='comment-container'> 
+               <form method='POST' action='/comment' style='margin-top: 30px;'>
+                 <h3>POST A COMMENT</h3>
+                 <input type='hidden' name='postid' value='<%= data._id %>'>
+                 <input type='text' name='comment' placeholder='type a comment' class='comment-input'>
+                 <button type='submit'>SUBMIT</button>
+
+                 <% if (Array.isArray(data.comments) && data.comments.length) { %>
+                   <% data.comments.map((commentdata) => { %>
+                     <div class='comment-card'>
+                       <p><%= commentdata.comment %></p>
+                       <p><span class="material-symbols-outlined bin">
+                       delete
+                       </span></p>
+                     </div>
+                   <% }) %>
+                 <% } else { %>
+                   <p>No comments yet.</p>
+                 <% } %>
+               </form>
+             </div>
+  </div>
+</body>
+</html>

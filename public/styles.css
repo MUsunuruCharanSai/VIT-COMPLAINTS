@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.complaintform {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form textarea,
+form select {
+  height: 45px;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button[type="submit"] {
+  height: 45px;
+  padding: 0 20px;
+  background-color: blue;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.ta {
+  height: 150px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 320px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+  margin-right: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #495057;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-head span {
+  height: 28px;
+}
+
+.submit-button {
+  display: block;
+  width: 160px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color:#FF4500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+nav {
+  background-color: #3F00FF;
+  color: #fff;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav p {
+  font-size: 1.6em;
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+.nav-button a {
+  padding: 12px 24px;
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-like-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-like-holder span {
+  font-size: 26px;
+  margin-top: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-component {
+  height: 12px;
+  width: 45px;
+}
+
+.material-symbols-outlined {
+  clip-path: circle();
+  margin-top: 4px;
+}
+
+.type {
+  background: #343a40;
+  color: #fff;
+}
+
+.post-container {
+  width: 1200px;
+  height: 550px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+.post {
+  margin-top: 40px;
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+h3 {
+  color: #495057;
+}
+
+.post-counter {
+  background: #28a745;
+  padding: 6px 10px;
+  clip-path: circle();
+  color: #fff;
+}
+
+.comment-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.comment-input {
+  height: 28px !important;
+}
+
+.comment-card {
+  background-color: #ffffff;
+  padding: 18px;
+  margin-top: 12px;
+  border-left: 6px solid #28a745;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-card p {
+  margin: 0;
+  font-size: 15px;
+  color: #495057;
+}
+
+.bin {
+  cursor: pointer;
+  background: #343a40 !important;
+  font-size: 26px !important;
+}
+
+.filter {
+  padding-top:20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}

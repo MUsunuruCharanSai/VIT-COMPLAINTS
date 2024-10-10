@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <link rel='stylesheet' type='text/css' href='/styles.css' />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <body>
+      <nav>
+        <p>COMPLAINTS - PORTAL</p>
+        <ul>
+          <li><a href='/'>Home</a></li>
+          <li class='nav-button'><a href='/complaints'>Submit a Complaint</a></li>
+        </ul>
+      </nav>
+     
+      <div>
+        <div>
+          <form method='POST' action='/filter' class='filter'>
+            <h3>Select a filter</h3>
+            <select name='filterValue' onchange='this.form.submit()'>
+              <option value='' hidden >Department</option>
+              <option value='cse'>
+                CSE
+              </option>
+              <option value='it'>
+                IT
+              </option>
+              <option value='csbs'>
+               CS&BS
+              </option>
+              <option value='aids'>
+                AI&DS
+              </option>
+              <option value='aiml'>
+                AI&ML
+              </option>
+              <hr />
+              <option value='all'>
+                &#10006; Clear
+              </option>
+            </select>
+
+          </form>
+
+        </div>
+      </div>
+
+
+
+      
+      <div class='card-container'>
+
+        <% for(i=0; i<data.length; i++){ %>
+          <% if (data[i]) { %>
+          <div class='card'>
+            <div class='card-head'>
+              <h3><%= data[i].type %> </h3>
+            <form method='post' action='/delete'>
+              <input type='hidden' name='postId' value='<%= data[i]._id %>'>
+
+              <button class="material-symbols-outlined bin" type='submit'>
+               delete
+               </button>
+              
+            </form>
+          
+            </div>
+           
+            <p><%=  data[i].complaint %></p>
+            <div class='btn-like-holder'>
+
+              <a class='submit-button' href='/posts/<%=data[i]._id %>'>View More</a>
+
+
+              <form method='POST' action='/likes' class='btn-component'>
+                <input type='hidden' name='thumbsup' value='<%=data[i]._id%>'/>
+                <button type='submit' class='material-symbols-outlined'>thumb_up</button>
+                
+              </form>
+                <span class='counter'><%=data[i].likes%></span>
+                 
+            
+
+              
+            </div>
+           
+          </div>
+             <% } %>
+        <% } %>
+        
+      </div>
+         
+        </body>
+  
+        </head>
+  
+</html>
